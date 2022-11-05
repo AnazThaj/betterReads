@@ -46,6 +46,7 @@ class UI {
     document.querySelector("#author").value = "";
     document.querySelector("#isbn").value = "";
   }
+  // My own implementation with the help from stackoverflow
   static deleteBook(target) {
     target.parentNode.parentNode.parentNode.removeChild(
       target.parentNode.parentNode,
@@ -66,6 +67,8 @@ document.querySelector("#book-form").addEventListener("submit", (e) => {
   const title = document.querySelector("#title").value;
   const author = document.querySelector("#author").value;
   const isbn = document.querySelector("#isbn").value;
+
+  // Validate Input
 
   // Instantiate book
   const book = new Book(title, author, isbn);
