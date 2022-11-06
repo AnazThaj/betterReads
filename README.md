@@ -2,7 +2,7 @@
 
 ## Codealong an app tutorial - ([Traversy Media - Javascript Booklist App](https://www.youtube.com/watch?v=JaMCxVWtW58))
 
-        ### Structure
+### Structure
 
 - Files:
   -- index.html
