@@ -26,11 +26,11 @@ Additionally, to keep the records persistent, the records will be stored and upd
 
 - main.js
   1. 3 classes
-  1. Book constructor
-  1. UI class
-  1. Storage class
-  1. 3 events
-  1. add book
-  1. display books
-  1. remove books
-  1. Storage - 'books'
+     1. Book constructor
+     2. UI class
+     3. Storage class
+  2. 3 events
+     1. add book
+     2. display books
+     3. remove books
+  3. Storage - 'books'
