@@ -1,12 +1,16 @@
-# betterReads
+# betterReads - [base-stage]
 
-One of my first apps built with Vanilla JS
+## Codealong an app tutorial - ([Traversy Media - Javascript Booklist App](https://www.youtube.com/watch?v=JaMCxVWtW58))
 
-## APPROACH
+        ### Structure
 
-- Codealong an app tutorial - ([Traversy Media - Javascript Booklist App](https://www.youtube.com/watch?v=JaMCxVWtW58))
-- Customise the app to my preference
-- Set an end-goal for features
-- Maintining balance between _Adding features_ & _Optimising performance_
-- Blog/video of me creating the app for documentation
-- Add to my portfolio
+- Files:
+  -- index.html
+  -- main.js
+
+#### index.html
+
+- Three sections
+  1. header
+  2. input
+  3. results
