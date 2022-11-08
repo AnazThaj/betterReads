@@ -1,4 +1,4 @@
-# betterReads - [base-stage]
+# betterReads - v0.1
 
 ## TODO
 
