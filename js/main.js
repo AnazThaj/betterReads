@@ -1,8 +1,7 @@
 // Book class: represents a book so every time we create a book it will instantiate a book object
 class Book {
-  constructor(title, author, isbn) {
+  constructor(title, isbn) {
     this.title = title;
-    this.author = author;
     this.isbn = isbn;
   }
 }
@@ -12,18 +11,6 @@ class Book {
 class UI {
   static displayBooks() {
     // making it static doesn't have to instantiate the class before calling the method.
-    // const StoredBooks = [
-    //   // {
-    //   //   title: "The Canterbury Tales",
-    //   //   author: "Geoffrey Chaucer",
-    //   //   isbn: "9780140424386",
-    //   // },
-    //   // {
-    //   //   title: "The Confederacy of Dunces",
-    //   //   author: "John Kennedy Toole",
-    //   //   isbn: "9780140058893",
-    //   // },
-    // ];
 
     const books = Store.getBooks();
 
@@ -35,21 +22,18 @@ class UI {
 
     row.innerHTML = `
       <td>${book.title}</td>
-      <td>${book.author}</td>
       <td>${book.isbn}</td>
       <td><a href="#" class="btn btn-danger btn-sm delete">X</a></td>
     `;
     list.appendChild(row);
   }
   static clearFields() {
-    document.querySelector("#title").value = "";
-    document.querySelector("#author").value = "";
     document.querySelector("#isbn").value = "";
   }
   // My own implementation with the help from stackoverflow
   static deleteBook(target) {
     target.parentNode.parentNode.parentNode.removeChild(
-      target.parentNode.parentNode,
+      target.parentNode.parentNode
     );
   }
   static showAlert(message, className) {
@@ -99,30 +83,35 @@ class Store {
 document.addEventListener("DOMContentLoaded", UI.displayBooks);
 
 // Event-2: Add a book
-document.querySelector("#book-form").addEventListener("submit", (e) => {
+document.querySelector("#btnSearch").addEventListener("click", (e) => {
   // Prevent actual submit
   e.preventDefault();
 
   // Get form values
-  const title = document.querySelector("#title").value;
-  const author = document.querySelector("#author").value;
   const isbn = document.querySelector("#isbn").value;
+  const url = `https://openlibrary.org/isbn/${isbn}.json`;
+  let title = "";
 
   // Validate Input
-  if (title === "" || author === "" || isbn === "") {
+  if (isbn === "") {
     console.log("Empty fields");
     UI.showAlert("empty fields", "danger");
   } else {
     // Instantiate book
-    const book = new Book(title, author, isbn);
-    // Add book to UI
-    UI.addBookToList(book);
-    // Add book to the localStorage
-    Store.addBook(book);
-    // Show success message
-    UI.showAlert("book added", "success");
-    // Clear fields once the book is added to the list
-    UI.clearFields();
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        title = data.title;
+        const book = new Book(title, isbn);
+        // Add book to UI
+        UI.addBookToList(book);
+        // Add book to the localStorage
+        Store.addBook(book);
+        // Show success message
+        UI.showAlert("book added", "success");
+        // Clear fields once the book is added to the list
+        UI.clearFields();
+      });
   }
 });
 
