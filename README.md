@@ -1,6 +1,11 @@
 # betterReads - [base-stage]
 
-## Codealong an app tutorial - ([Traversy Media - Javascript Booklist App](https://www.youtube.com/watch?v=JaMCxVWtW58))
+## Update for v0.1
+
+- Add books by ISBN which fetch the data from OpenLibrary API
+- Title and author fields have been removed
+
+## Base Version
 
 This base version of the book app has THREE basic functionalities.
 
