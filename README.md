@@ -1,4 +1,4 @@
-# betterReads - v0.1
+# betterReads - v0.1 _(Current version)_
 
 ## TODO
 
