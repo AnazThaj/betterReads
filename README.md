@@ -1,5 +1,16 @@
 # betterReads - [base-stage]
 
+## TODO
+
+### v0.1
+
+- [x] Add API for fetching books from [OpenLibrary](https://openlibrary.org/dev/docs/api/)
+- [x] Search and add books by ISBN
+- [ ] Search books by either title, or author, or ISBN
+- [ ] Redesign the UI to have a temperory area for search results to be displayed (Should be some sort of overlay above the book display below the search area)
+- [ ] Ability to add books by pressing [+] sign at the right column of the book results
+- [ ] Books display section for books the user has already added
+
 ## Update for v0.1
 
 - Add books by ISBN which fetch the data from OpenLibrary API
