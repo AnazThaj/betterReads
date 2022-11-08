@@ -2,8 +2,8 @@
 
 ## TODO
 
-[*] - Basic UI design
-[] - Display, add, and remove books
+- [x] Basic UI design
+- [] Display, add, and remove books
 
 ## Update for v0.1
 
