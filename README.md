@@ -3,7 +3,7 @@
 ## TODO
 
 - [x] Basic UI design
-- [] Display, add, and remove books
+- [ ] Display, add, and remove books
 
 ## Update for v0.1
 
