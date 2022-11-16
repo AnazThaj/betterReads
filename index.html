@@ -20,7 +20,19 @@
     <form id="book-form">
       <div class="input-group mb-3">
         <input type="text" id="isbn" class="form-control" placeholder="Enter ISBN# to add books" />
-        <button type="button" id="btnSearch" class="btn btn-primary btn-block">
+        <button type="button" id="btnISBN" class="btn btn-primary btn-block">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </button>
+      </div>
+      <div class="input-group mb-3">
+        <input type="text" id="title" class="form-control" placeholder="Enter Title to Search" />
+        <button type="button" id="btnTitle" class="btn btn-primary btn-block">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </button>
+      </div>
+      <div class="input-group mb-3">
+        <input type="text" id="author" class="form-control" placeholder="Enter Author to Search for Books" />
+        <button type="button" id="btnAuthor" class="btn btn-primary btn-block">
           <i class="fa-solid fa-magnifying-glass-plus"></i>
         </button>
       </div>
@@ -30,6 +42,7 @@
         <tr>
           <th>Title</th>
           <th>ISBN</th>
+          <th>Author</th>
           <th></th>
         </tr>
       </thead>
